@@ -1,0 +1,90 @@
+<%- include('partials/header.ejs') %>
+
+    <section class="section--overview">
+      <div class="container">
+        <div class="grid grid--1">
+          <div
+            class="emptydiv"
+            
+            aria-roledescription="an empty box with a background image"
+          >
+            <h2 class="product-info">
+              Amazing Tools For Your Digital Business
+            </h2>
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--product">
+      <div class="container">
+        <h2 class="sub-text m text-center">
+          you can choose from whichever tool for fitting your need
+        </h2>
+      </div>
+
+      <div class="container">
+        <div class="grid grid--3--col text-center">
+          <% data.forEach(products => { %>
+          <div class="products-div">
+            <div  class="img-div">
+              
+              <a
+                href="<%= products.affiliateLink %>"
+                target="_blank"
+                class="product-image"
+              >
+                <img
+                  src="<%= products.productImage %>"
+                  loading="lazy"
+                  class="product-image"
+                  alt="<%= products.productName %>"
+                  width="400"
+                  height="300"
+                />
+              </a>
+            </div>
+            <div class="prod--info">
+              <h3 class="product-name text-left">
+                <%= products.productName %>
+              </h3>
+              <p class="product-desc text-left"><%= products.productDesc %></p>
+              <p class="products--price text-left">$<%= products.Price %></p>
+              <a
+                href="<%= products.affiliateLink %>"
+                class="affiliate-link"
+                target="_blank"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <% }) %>
+        </div>
+
+        <!-- Pagination Container -->
+        <div class="pagination-container">
+          <div class="pagination">
+            <% if (currentPage > 1) { %>
+            <a href="/?page=<%= currentPage - 1 %>" class="pagination-link"
+              >Previous</a
+            >
+            <% } %> <% for (let i = 1; i <= totalPages; i++) { %>
+            <a
+              href="/?page=<%= i %>"
+              class="pagination-link <%= i === currentPage ? 'active' : '' %>"
+            >
+              <%= i %>
+            </a>
+            <% } %> <% if (currentPage < totalPages) { %>
+            <a href="/?page=<%= currentPage + 1 %>" class="pagination-link"
+              >Next</a
+            >
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

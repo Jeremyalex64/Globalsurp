@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: rubik, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  font-size: 2rem;
+}
+
+a,
+a:visited,
+.nav-links {
+  display: inline-block;
+  text-decoration: none;
+
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+a:hover,
+a:active {
+  color: red;
+}
+.bold {
+  font-weight: 600;
+}
+.nav-brand {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.section--overview {
+  margin: 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(102, 102, 255, 0.822),
+    rgb(255, 153, 153)
+  );
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.grid--1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 6rem;
+}
+.grid--3--col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.emptydiv {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.151),
+      rgba(0, 0, 0, 0.856)
+    ),
+    url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/8;
+  margin: 4rem 0;
+
+  max-width: 100%;
+  position: relative;
+}
+
+.product-info {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 5rem;
+  text-transform: uppercase;
+}
+.sub-text {
+  color: #000;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.m {
+  margin: 5rem 0;
+}
+.text-center {
+  text-align: center;
+}
+.product-name {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.product-desc {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+.text-left {
+  text-align: left;
+}
+
+.products--price {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+.about-global h2,
+.about-mission h2,
+.about-software h2,
+.about-team h2 {
+  color: #000 !important;
+}
+.affiliate-link,
+.affiliate-link:visited {
+  color: #fff;
+  font-size: 2rem;
+  display: block;
+  background-color: rgb(33, 47, 61);
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+}
+
+.affiliate-link:hover,
+.affiliate-link:active {
+  background-color: #000;
+  color: #fff;
+}
+.products-div {
+  box-shadow: 0.2rem 0.2rem 0.5rem 0rem rgba(0, 0, 0, 0.473);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn-nav {
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+.close-btn,
+.open-btn {
+  height: 5rem;
+  width: 5rem;
+}
+
+.product-image,
+.product-image:visited {
+  max-width: 100%;
+  margin-bottom: 0rem;
+  aspect-ratio: 12/4;
+  transition: all 0.5s ease-in-out;
+}
+
+.img-div,
+.img-div:visited {
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+  height: 30rem;
+}
+
+.img-div:hover,
+.img-div:active {
+  transform: scale(1.05);
+}
+
+.prod--info {
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+}
+.advice {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.advice:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(102, 102, 255, 0.822),
+    rgb(255, 153, 153)
+  );
+  margin: 4rem 0 0 0;
+  padding: 4rem 1rem;
+}
+
+.grid--4--col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Pagination Styles */
+.pagination-container {
+  margin: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+span {
+  font-weight: 600;
+  font-size: 1.8;
+}
+.pagination {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.heading {
+  font-size: 3.5rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+.pagination-link {
+  padding: 1rem 2rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+/* .ion-icon {
+  height: 5.2rem;
+  width: 5.2rem;
+} */
+.pagination-link:hover {
+  background-color: #f5f5f5;
+}
+/* Add this to your CSS (place it after your other link styles) */
+.contact-links {
+  color: #2b6cb0; /* Blue color (adjust as needed) */
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 2px solid #2b6cb0;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block; /* Already set, but keep it */
+  margin-right: 10rem;
+}
+.contact-links:active,
+.contact-links:hover {
+  background-color: #2b6cb0;
+  color: white;
+  transform: translateY(-2px); /* Optional: slight lift effect */
+}
+.pagination-link.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.grid--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.section--footer {
+  margin-top: 0rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(102, 102, 255, 0.295),
+    rgb(15, 7, 7)
+  );
+  padding: 5rem 1rem;
+  color: #fff;
+}
+
+.footer-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 2rem;
+  list-style: none;
+  min-height: 30rem;
+  align-items: flex-start;
+}
+
+.footer-link-header {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-link-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: red;
+}
+
+.footer-links {
+  width: 100%;
+}
+
+.footer-links a,
+.footer-links a:visited {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out !important;
+  text-transform: capitalize;
+  opacity: 0.9;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+  border-bottom: 0.4rem solid red;
+  color: #fff;
+}
+
+.footer-links a:has(.footer-icon):hover,
+.footer-links a:has(.footer-icon):active {
+  border-bottom: none;
+}
+
+.footer-links a.copyright:hover,
+.footer-links a.copyright:active {
+  border-bottom: none;
+  opacity: 1;
+}
+
+.footer-icon {
+  height: 8rem;
+  width: 8rem;
+  aspect-ratio: 1;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* About Page Styles */
+.about-us {
+  padding: 2rem 0;
+  background: #f9f9f9;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.about-header .subtitle {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 1rem auto 0;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-mission,
+.about-global,
+.about-software,
+.about-team {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-content h2 {
+  color: #3498db;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.world-map {
+  width: 100%;
+  height: 100%;
+}
+.software-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.benefit-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.global-map {
+  height: 300px;
+  background: #eee;
+  margin-top: 2rem;
+  border-radius: 6px;
+  /* Add background image of world map in your actual implementation */
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.945);
+  color: white;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.cta-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0.5rem;
+}
+
+.btn-primary {
+  background: white;
+  color: #3498db;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+}
+.cta-section {
+  font-size: 1.5rem;
+}
+.cta-section h3 {
+  font-size: 2rem;
+}
+
+.head-h1 {
+  font-size: 3rem;
+  text-align: left;
+}
+
+.section--contact {
+  padding-top: 4rem;
+}
+.content-header {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 6rem 0 3rem 0;
+}
+.recently-updated {
+  font-size: 2rem;
+  margin: 3rem 0;
+}
